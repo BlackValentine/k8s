@@ -18,6 +18,7 @@
     "image-size": "^0.8.3",
     "jimp": "^0.10.3",
     "mysql": "^2.18.1",
+    "node-gyp": "^9.4.0",
     "png-file-stream": "^1.2.1"
   }
 }

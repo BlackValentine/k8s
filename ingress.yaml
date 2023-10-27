@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: main
+spec:
+  rules:
+  - http:
+      paths:
+        - backend:
+            service:
+              name: k8scourse-back
+              port:
+                number: 80
+          path: /api(/|$)(.*)
+          pathType: Prefix
+        - backend:
+            service:
+              name: k8scourse-front
+              port:
+                number: 80
+          path: /()(.*)
+          pathType: Prefix

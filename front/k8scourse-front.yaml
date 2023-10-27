@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8scourse-front
+  labels:
+    app: k8scourse-demo
+    role: frontend
+spec:
+  template:
+    metadata:
+      labels:
+        app: k8scourse-demo
+        role: frontend
+    spec:
+      containers:
+      - name: server
+        image: blackvalentine1404/k8scourse:v1
+        env:
+        - name: BASE_URL
+          value: api
+  selector: 
+    matchLabels:
+      role: frontend
+  replicas: 2
