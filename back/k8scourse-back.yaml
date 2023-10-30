@@ -15,6 +15,13 @@ spec:
       containers:
       - name: api
         image: blackvalentine1404/k8scourse-back:v1
+        env:
+        - name: MYSQL_HOST
+          value: mysql
+        - name: MYSQL_USER
+          value: user
+        - name: MYSQL_PASS
+          value: mysql
   selector:
     matchLabels:
       role: backend
